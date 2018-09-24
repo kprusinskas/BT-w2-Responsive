@@ -62,7 +62,7 @@ footer {
 }
 
 
-@media (min-width:800px) {
+@media (max-width:800px) {
   aside {
     display: none;
   }
