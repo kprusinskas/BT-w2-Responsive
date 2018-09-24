@@ -1,0 +1,72 @@
+body,
+body * {
+  margin: 0;
+  margin: 0;
+  box-sizing: border-box;
+  vertical-align: top; /*tegul visi krenta ir lygiuojasi per virsutine riba*/
+  font-size: 24px;
+  font-family: monospace;
+
+}
+
+.container {
+  display: inline-block;
+  width: 100%;
+}
+
+header {
+  background-color: blue;
+  color: white;
+  padding: 15px;
+}
+  header > div {
+    display: inline-block;
+    float: left;
+  }
+  header > nav {
+    display: inline-block;
+    float: right;
+  }
+  header a {
+    color: white;
+  }
+
+aside {
+  display: inline-block;
+  float: left;
+  background-color: green;
+  width: 25%;
+  padding: 15px;
+
+}
+
+section {
+  display: inline-block;
+  float: left;
+  background-color: yellow;
+  width: 100%;
+  padding: 15px;
+
+}
+
+div > section {
+  background-color: orange;
+  width: 75%;
+}
+
+
+footer {
+  background-color: brown;
+  padding: 15px;
+
+}
+
+
+@media (max-width:800px) {
+  aside {
+    display: none;
+  }
+  div > section {
+    width: 100%;
+  }
+}
