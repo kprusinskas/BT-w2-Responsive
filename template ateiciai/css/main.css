@@ -1,0 +1,122 @@
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+    font-size: 32px;
+    font-family: monospace;
+}
+
+.container {
+    display: inline-block;
+    width: 100%;
+}
+
+/************
+ * HEADER
+ ************/
+header {
+    background: pink;
+    color: #FFF;
+    padding: 20px;
+}
+    .logo {
+        display: inline-block;
+        float: left;
+    }
+    header > nav {
+        display: inline-block;
+        float: right;
+    }
+        header a {
+            color: #FFF;
+        }
+    .menu {
+        display: none;
+        background: blue;
+        padding: 2px 0;
+    }
+        .menu > .line {
+            display: block;
+            width: 30px;
+            height: 4px;
+            margin: 3px 0;
+            background-color: #FFF;
+            border-radius: 12px;
+            font-size: 0;
+        }
+
+
+/************
+ * HEADER
+ ************/
+aside {
+    display: inline-block;
+    float: left;
+    padding: 20px;
+    background: green;
+    width: 25%;
+}
+
+/************
+ * HEADER
+ ************/
+section {
+    display: inline-block;
+    float: left;
+    padding: 20px;
+    background: yellow;
+    width: 100%;
+}
+div > section {
+    width: 75%;
+    background: orange;
+}
+
+/************
+ * HEADER
+ ************/
+footer {
+    padding: 20px;
+    background: brown;
+}
+
+p {
+    line-height: 38px;
+}
+
+
+
+@media (max-width:800px) {
+    .logo {
+        font-size: 24px;
+    }
+    aside {
+        display: none;
+    }
+    div > section {
+        width: 100%;
+    }
+}
+
+
+@media (max-width:480px) {
+    header > nav {
+        display: none;
+    }
+    .menu {
+        display: inline-block;
+        float: right;
+    }
+    div > section {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+@media (min-width:901px) {
+    div > section {
+        background: red;
+    }
+}

@@ -1,31 +1,125 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="css/main.css">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Comatible" contecnt="ie-edge">
-    <title>w1d1 Responsive</title>
-  </head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
 
-  <body>
-    <header class="container">
-      <div>LOGO</div>
-      <nav>
-        <a href="#">Nuoroda</a>
-        <a href="#">Nuoroda</a>
-        <a href="#">Nuoroda</a>
-        <a href="#">Nuoroda</a>
-      </nav>
-    </header>
-    <div class="container"> <!-- konteineris turi buti per visa ekrana ir i jo bloka neturi lysti. t.y. teritorija -->
-      <aside>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</aside>
-      <section>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</section>
+<!--
+- HEADER
+-->
+
+<header>
+  <div class="banner">
+    <div class="logo">
     </div>
-    <section class="container">My services.</section>
-    <footer class="container">
-      &copy;All rights reserved. 2018
-    </footer>
-  </body>
+    <div class="header-text">
+      <h1 class="textBlack">comming soon</h1>
+      <p class="textGrey">An awesome new company for web resources is coming very soon.
+      <span>Enter your email to request an early invitation!</span></p>
+    </div>
+
+      <div class="counter">
+        <ul class="countdown textWhite"> <!-- realiai koncepta pasivogiau, nes norejau pabandyti be div -->
+          <li>
+            <span class="days">461</span>
+            <p>days</p>
+          </li>
+          <li>
+            <span class="hours">16</span>
+            <p>hours</p>
+          </li>
+          <li>
+            <span class="minutes">58</span>
+            <p>minutes</p>
+          </li>
+          <li>
+            <span class="seconds">08</span>
+            <p>sekundes</p>
+          </li>
+        </ul>
+      </div>
+    <div class="subscribe">
+      <form action="">
+        <label for="e-mail"></label>
+        <input type="text" id="e-mail" name="e-mail" placeholder="Type your email">
+        <input type="submit" value="Subscribe Now">
+      </form>
+    </div>
+  </div>
+  <div class="mouse-animation">
+    <div class="mouse">
+      <div class="rutuliukas"></div>
+    </div>
+  </div>
+</header>
+
+<!--
+- CONTENT
+-->
+
+<section class="container content">
+  <div class="content-left">
+    <div>
+      <h1>ABOUT STARTUP</h2>
+      <p>Matrox material design multi-purpose html template. It comes with huge content and background variants. <a href="#">Matrox</a> is coming very soon. We are nearly there..</p>
+      <div class="progress-section">
+        <span>UX Design</span>
+        <div class="progress">
+          <div class="progress-bar">
+            <span>90%</span>
+          </div>
+        </div>
+      </div>
+      <div class="progress-section">
+        <span>Web Design</span>
+        <div class="progress">
+          <div class="progress-bar">
+            <span>86%</span>
+          </div>
+        </div>
+      </div>
+      <div class="progress-section">
+        <span>Web Development</span>
+        <div class="progress">
+          <div class="progress-bar">
+            <span>89%</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="content-right">
+    <h1>HAVE ANY QUESTION?</h2>
+    <p>You can use contact form below or contact us via e-mail at: <a href="#">trendytheme.net@gmail.com</a> Contact form is fully working and very easy to customize.</p>
+    <div class="register">
+      <form action="">
+        <div>
+          <label for="name"></label>
+          <input type="text" id="" name="" placeholder="name">
+
+          <label for="e-mail"></label>
+          <input type="text" id="" name="" placeholder="e-mail">
+        </div>
+          <label for="message"></label>
+          <input type="text" id="" name="" placeholder="message">
+      </form>
+      <input type="submit" value="Send Message">
+    </div>
+  </div>
+</section>
+
+<!--
+- FOOTER
+-->
+
+<footer>
+  <div class="container">&copy;All rights reserved. 2018</div>
+</footer>
+</body>
 </html>
