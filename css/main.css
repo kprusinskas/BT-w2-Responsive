@@ -1,24 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,900&subset=latin-ext');
 
-
-:root {
-    --White: white;
-    --Black: black;
-    --SilverBright: #eee;
-    --SilverDark: #999;
-    --Accent1: red;
-    --Accent2: #03a9f4;
-}
-.textWhite {
-  color: var(--White);
-}
-.textGrey {
-  color: var(--SilverDark);
-}
-.textBlack {
-  color: var(--Black);
-}
-
 body,
 body * {
     margin: 0;
@@ -28,82 +9,182 @@ body * {
     font-family: Raleway;
 }
 
+  /********************
+   * PAGE VARIABLES
+  ********************/
+
+:root {
+  --White: white;
+  --Black: black;
+  --SilverBright: #eee;
+  --SilverDark: #999;
+  --Accent1: #9e1b3d;
+  --Accent1Bright: #BF3E57;
+  --Accent1Dark: #84002A;
+  --Accent2: #ffcb09;
+  --Accent2Bright: #FFE739;
+  --Accent2Dark: #E3B300;
+  --MouseColor: #ffcb09;
+}
+
+.textWhite {
+  color: var(--White);
+}
+.textGrey {
+  color: var(--SilverDark);
+}
+.textBlack {
+  color: var(--Black);
+}
+.textRed {
+  color: var(--Accent1);
+}
+.textYellow {
+  color: var(--Accent2);
+}
+
+.btn {
+  width: 100%;
+  background-color: var(--Accent1);
+  color: var(--Accent2);
+  padding: 12px 18px;
+  margin: 30px;
+  border: 1px solid var(--Black);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.inputText {
+  display: inline-block;
+  width: 100%;
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 300;
+}
+  .inputText > input {
+    width: 100%;
+    height: 32px;
+    font-size: 24px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid var(--Accent2);
+    border-width: 0px 0px 1px 0px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
 .container {
-    display: inline-block;
-    width: 1200px;
-    margin-left: calc(50% - 600px);
+  display: inline-block;
+  width: 1200px;
+  margin-left: calc(50% - 600px);
 }
 
 .banner {
-    display: inline-block;
-    width: 720px;
-    margin-left: calc(50% - 360px);
+  display: inline-block;
+  width: 720px;
+  margin-left: calc(50% - 360px);
+  margin-top: calc(50% - 50vh);
 }
 
-/************
- * HEADER
- ************/
+.banner > div {
+  margin: 60px 0 0 0; /* marginas tarp pagrindiniu blogu headeryje. */
+}
+
+  /********************
+   * HEADER
+  ********************/
 
 header {
-  background-image: url(../img/imgBG.png);
+  background-image: url(../img/imgBG2.jpg);
   width: 100%;
   height: 100vh;
+  min-height: 720px;
   background-position: center;
   background-size: cover;
+  /*transform: rotateY(180deg);  /* SUMMON DESTYTUVAS */
 }
+header > img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(555, 555, 0, 0.5), rgba(0, 0, 0, 0), rgba(555, 0, 555, 0.5));
+}
+
   header > div {
     display: inline-block;
     float: left;
     width: 100%;
   }
-  header h1 {
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 64px;
-    text-align: center;
-    margin: 32px 0px;
-  }
-  header p {
-    font-weight: 200;
-    font-size: 24px;
-    text-align: center;
-    margin: 32px 0px;
-  }
+
+  /********************
+   * HEADER LOGO ELEMENT
+  ********************/
+
+.logo {
+  width: 128px;
+  height: 128px;
+  background-image: url(../img/KASP_logo.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  margin-left: calc(50% - 64px);
+  /*margin-top: calc(256px);*/
+}
+
+  /********************
+   * HEADER TEXT INFO
+  ********************/
+
+header h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 16px; /* margin tarp h1 ir p */
+}
+header p {
+  font-weight: 200;
+  font-size: 24px;
+  text-align: center;
+}
   header p > span {
     display: inline-block;
   }
 
-.logo {
-  width: 64px;
-  height: 64px;
-  background-image: url(../img/KASP_logo.jpeg);
-  background-size: cover;
-  margin-left: calc(50% - 32px);
-  margin-top: calc(256px);
+  /********************
+   * HEADER CLOCK ELEMENT
+  ********************/
+
+.clock {
+    display: inline-block;
+    width: 100%; /* originalus banner plotis 720px */
+    margin-left: calc(50% - 360px);
+}
+    .clock > .time {
+        display: inline-block;
+        float: left;
+        margin: 0;
+        width: 25%;
+        font-size: 64px;
+        font-weight: 900;
+
+    }
+        .clock > .time > * {
+            text-align: center;
+        }
+        .clock > .time > .unit {
+            font-size: 24px;
+            line-height: 24px;
+            font-weight: 300;
+        }
+
 }
 
-.counter {
-  display: inline-block;
-  float: left;
-  width: 100%;
-}
-.counter > .countdown {
-  display: inline-block;
-  float: left;
-  width: 100%;
-  text-align: center;
-  font-size: 64px;
-  font-weight: 900;
-  margin-left: calc(50% - 360px);
-}
-.counter li {
-  display: inline-block;
-  float: left;
-  margin: 0px 16px;
-}
-.counter p {
-  margin: 0px;
-}
+  /********************
+   * HEADER EMAIL INPUT & SUBSCRIBE ELEMENT
+  ********************/
+
 .subscribe {
 
 }
@@ -112,83 +193,69 @@ header {
     float: left;
     width: 100%;
   }
-  .subscribe > form > input[type=text] {
-    display: inline-block;
-    float: left;
-    width: 100%;
-    border: 1px solid var(--White);
-    border-width: 0px 0px 2px 0px;
-    background-color: rgba(0, 0, 0, 0);
-    color: var(--White);
-    margin: 15px;
+  .subscribe > form input[type=text] {
+
   }
   .subscribe > form > input[type=submit] {
     width: 256px;
-    background-color: var(--Accent1);
-    color: var(--SilverBright);
-    padding: 12px 18px;
-    margin-top: 50px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
     margin-left: calc(50% - 128px);
   }
 
-.mouse-animation {
+  /********************
+   * HEADER MOUSE ELEMENT
+  ********************/
+
+.mouse {
+  height: 50px;
+  width: 30px;
+  margin-left: calc(50% - 15px);
+  border: 3px solid var(--MouseColor);
+  border-radius: 15px;
+  background-color: rgba(0,0,0,0);
   position: absolute;
   bottom: 50px;
   left: 0px;
 }
-.mouse {
-  height: 50px;
-  width: 30px;
-  /*margin-top: calc(100% - 200px);*/
-  margin-left: calc(50% - 15px);
-  border: 3px solid white;
-  border-radius: 15px;
-  background-color: rgba(0,0,0,0);
-  position: relative;
-}
-.mouse > .rutuliukas {
-  width: 4px;
-  height: 8px;
-  background-color: white;
-  border-radius: 5px;
-  position: absolute;
-  top: 4px;
-  left: calc(50% - 2px);
-  animation-name: animacija;
-  animation-duration: 1.5s;
-  animation-delay: 0.5s;
-  animation-iteration-count: infinite;
-}
-@keyframes animacija {
-  0%  {
+  .mouse > .rutuliukas {
+    width: 4px;
+    height: 8px;
+    background-color: var(--MouseColor);
+    border-radius: 5px;
+    position: absolute;
     top: 4px;
-    opacity: 0;
+    left: calc(50% - 2px);
+    animation-name: animacija;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
   }
- 25%  {
-   opacity: 1;
- }
- 55%  {
-   opacity: 1;
- }
- 90% {
-   opacity: 0;
- }
-  100% {
-    top: 25px;
-    opacity: 0;
- }
-}
+    @keyframes animacija {
+      0%  {
+        top: 4px;
+        opacity: 0;
+      }
+     25%  {
+       opacity: 1;
+     }
+     55%  {
+       opacity: 1;
+     }
+     90% {
+       opacity: 0;
+     }
+      100% {
+        top: 25px;
+        opacity: 0;
+     }
+    }
 
-/************
- * CONTENT
- ************/
+    /********************
+     * CONTENT
+    ********************/
 
 .content {
-  margin-top: 64px;
+  margin-top: 192px;
+  margin-bottom: 192px;
 }
   .content h1 {
     text-transform: uppercase;
@@ -245,20 +312,26 @@ section {
   }
     .register > form {
       display: inline-block;
-      float: left;
       width: 100%;
-      margin: 10px;
     }
     .register > form input[type=text] {
-      display: inline-block;
-      border: solid #ccc;
-      border-width: 0px 0px 2px 0px;
-      margin: 15px;
+      border: 1px solid #ccc;
+      border-width: 0px 0px 1px 0px;
     }
-      .register > form > div > input[type=text] {
+      .register > form > div {
         display: inline-block;
         float: left;
+        width: 100%;
+        margin: 0 0 30px 0;
+      }
+      .register > form > div > div {
+        float: left;
         width: 50%;
+        padding: 0 10px;
+      }
+
+      .register > form input[type=text] {
+        width: 100%;
       }
 
       /************
@@ -266,16 +339,9 @@ section {
        ************/
 
   .register > input[type=submit] {
+    display: inline-block;
+    float: right;
     width: 50%;
-    background-color: var(--Accent1);
-    color: var(--SilverBright);
-    padding: 12px 18px;
-    margin-top: 50px;
-    border: none;
-    border-radius: 24px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
   }
 
 
@@ -286,9 +352,34 @@ section {
 footer {
   display: inline-block;
   width: 100%;
-  background: brown;
+  height: 256px;
+  background: var(--Accent1);
   padding: 20px;
+  position: relative;
 }
+.back-to-top {
+   display: block;
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   background-color: var(--Accent2);
+   position: absolute;
+   top: -40px;
+   right: 80px;
+   border: 1px solid var(--Accent2Dark);
+   border-width: 0px 2px 4px 2px;
+   box-shadow: 15px 15px 35px 0px rgba(0, 0, 0, 0.1);
+}
+  .back-to-top .arrow-up {
+    position: relative;
+    left: 26px;
+    top: 30px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 18px solid var(--Accent2Dark);
+  }
 
 p {
     line-height: 38px;
