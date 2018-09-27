@@ -83,7 +83,6 @@ body * {
   display: inline-block;
   width: 720px;
   margin-left: calc(50% - 360px);
-  margin-top: calc(50% - 50vh);
 }
 
 .banner > div {
@@ -98,9 +97,10 @@ header {
   background-image: url(../img/imgBG2.jpg);
   width: 100%;
   height: 100vh;
-  min-height: 720px;
-  background-position: center;
+  min-height: 960px;
+  background-position: center middle;
   background-size: cover;
+  background-attachment: fixed;
   /*transform: rotateY(180deg);  /* SUMMON DESTYTUVAS */
 }
 header > img {
@@ -127,9 +127,7 @@ header > img {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-
   margin-left: calc(50% - 64px);
-  /*margin-top: calc(256px);*/
 }
 
   /********************
@@ -168,7 +166,6 @@ header p {
         width: 25%;
         font-size: 64px;
         font-weight: 900;
-
     }
         .clock > .time > * {
             text-align: center;
@@ -208,13 +205,12 @@ header p {
 .mouse {
   height: 50px;
   width: 30px;
-  margin-left: calc(50% - 15px);
+  margin-left: calc(50% - 360px);
   border: 3px solid var(--MouseColor);
   border-radius: 15px;
   background-color: rgba(0,0,0,0);
-  position: absolute;
-  bottom: 50px;
-  left: 0px;
+  position: relative;
+  left: calc(50% - 15px);
 }
   .mouse > .rutuliukas {
     width: 4px;
@@ -291,18 +287,37 @@ section {
       display: inline-block;
       width: 100%;
     }
+      .progress-section > span:nth-child(odd) {
+        float: left;
+        padding: 0 0 10px 0;
+      }
+      .progress-section > span:nth-child(even) {
+        float: right;
+        padding: 0 0 10px 0;
+      }
     .progress {
       display: inline-block;
       width: 100%;
       height: 6px;
       background-color: var(--SilverBright);
+      margin-bottom: 30px;
     }
       .progress-bar {
         display: inline-block;
-        width: 90%;
+        width: 100%;
         height: 100%;
         background-color: var(--Accent2);
       }
+        .pb1 {
+          width: 90%;
+        }
+        .pb2 {
+          width: 85%;
+        }
+        .pb3 {
+          width: 92%;
+        }
+
 
   .content-right {
     display: inline-block;
@@ -352,9 +367,8 @@ section {
 footer {
   display: inline-block;
   width: 100%;
-  height: 256px;
+  height: 512px;
   background: var(--Accent1);
-  padding: 20px;
   position: relative;
 }
 .back-to-top {
@@ -381,9 +395,69 @@ footer {
     border-bottom: 18px solid var(--Accent2Dark);
   }
 
-p {
-    line-height: 38px;
+  /************
+   * FOOTER UPPER
+   ************/
+
+.footerUpper {
+
 }
+
+.footerUpper > .socialMediaIcons {
+    display: inline-block;
+    float: left;
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    padding: 40px 0px;
+  }
+.footerUpper > .socialMediaIcons > .icon {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  margin-left: 12px;
+}
+  .footerUpper > .socialMediaIcons > .icon:hover {
+    background-color: var(--Accent1Dark);
+    border-radius: 50%;
+  }
+.footerUpper > .socialMediaIcons > .icon .fa {
+  line-height: 48px;
+  font-size: 18px;
+  width: 100%;
+  color: var(--Accent2);
+}
+
+/************
+ * FOOTER LOWER
+ ************/
+
+.footerLower {
+  border-style: solid;
+  border-width: 2px 0px 0px 0px;
+  border-color: var(--Accent1Dark);
+  text-align: center;
+}
+  .footerLower p {
+    color: var(--Accent1Bright);
+  }
+  .footerLower a {
+    color: var(--SilverBright);
+    text-decoration: none;
+  }
+
+.footerLogo {
+  width: 64px;
+  height: 64px;
+  background-image: url(../img/KASP_logo.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  margin-left: calc(50% - 32px);
+  /*margin-top: calc(256px);*/
+}
+
 
 
 
