@@ -9,9 +9,9 @@ body * {
     font-family: Raleway;
 }
 
-  /********************
-   * PAGE VARIABLES
-  ********************/
+                                                          /********************
+                                                           * PAGE VARIABLES
+                                                          ********************/
 
 :root {
   --White: white;
@@ -56,21 +56,23 @@ body * {
   padding: 12px 18px;
   border: 1px solid var(--Black);
   border-style: solid;
-
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
 }
+.btn:hover {
+  background-color: var(--Accent1Dark);
+  color: var(--Accent2Bright);
+}
 .btn:active {
-  width: 100%;
   background-color: var(--Accent2Bright);
   color: var(--Accent1Dark);
-  padding: 12px 18px;
-  margin: 30px;
-  border: 1px solid var(--Black);
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 500;
+}
+@media (max-width:480px) {
+  .btn {
+    font-size: 14px;
+    font-weight: 400;
+  }
 }
 
 .inputTextSubscribe {
@@ -139,22 +141,26 @@ body * {
     margin: 0 0 60px 0; /* marginas tarp pagrindiniu blogu headeryje. */
   }
 @media (max-width:768px) {
-.banner {
-  display: inline-block;
-  width: auto;
-  margin: 0px 5%;
+  .banner {
+    display: inline-block;
+    margin-left: 0;
+    width: 100%;
+    padding: 0 5%;
+  }
+    .banner > div {
+      margin: 0 0 30px 0;
+    }
 }
+@media (max-width:480px) {
   .banner > div {
-    margin: 0 0 30px 0;
+    margin: 0 0 20px 0;
   }
 }
-
-  /************************************************************
-   * HEADER
-  ************************************************************/
-
+                  /************************************************************
+                   * HEADER
+                  ************************************************************/
 header {
-  background-image: url(../img/imgBG2.jpg);
+  background-image: url(../img/imgBG3.jpg);
   width: 100%;
   min-height: 900px;
   height: 100vh;
@@ -169,21 +175,9 @@ header {
     min-height: 800px;
     position: relative;
   }
-
-/*@media (max-width:1200px) {
-  header {
-    width: 100%;
-    height: 100vh;
-    min-height: 820px;
-  }
-  header > .headerContent {
-  }
-}*/
-
-  /********************
-   * HEADER LOGO ELEMENT
-  ********************/
-
+                                                            /********************
+                                                             * HEADER LOGO ELEMENT
+                                                            ********************/
 .logo {
   width: 128px;
   height: 128px;
@@ -194,9 +188,9 @@ header {
   margin-left: calc(50% - 64px);
 }
 
-  /********************
-   * HEADER TEXT INFO
-  ********************/
+                                                          /********************
+                                                             * HEADER TEXT INFO
+                                                            ********************/
 
 header h1 {
   text-transform: uppercase;
@@ -217,20 +211,16 @@ header p {
   header h1 {
     font-weight: 900;
     font-size: 48px;
-    margin-bottom: 16px; /* margin tarp h1 ir p */
+    margin-bottom: 12px; /* margin tarp h1 ir p */
   }
   header p {
     font-weight: 300;
-    font-size: 22px;
+    font-size: 20px;
   }
-    header p > span {
-
-    }
 }
-  /********************
-   * HEADER CLOCK ELEMENT
-  ********************/
-
+                                                            /********************
+                                                             * HEADER CLOCK ELEMENT
+                                                            ********************/
 .clock {
     display: inline-block;
     width: 100%; /* originalus banner plotis 720px */
@@ -262,6 +252,7 @@ header p {
       display: inline-block;
       float: left;
       margin: 0;
+      font-size: 52px;
       min-width: 25%;
       max-width: 100%;
   }
@@ -275,21 +266,18 @@ header p {
       font-size: 48px;
       font-weight: 900;
       text-shadow: 5px 5px 30px rgba(0,0,0,.5);
+      margin-bottom: 12px;
     }
-      .clock > .time > * {
-
+      .clock > .time > .unit {
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 300;
+        text-shadow: 3px 3px 20px rgba(0,0,0,.5);
       }
-        .clock > .time > .unit {
-          font-size: 24px;
-          line-height: 24px;
-          font-weight: 300;
-          text-shadow: 3px 3px 20px rgba(0,0,0,.5);
-        }
 }
-  /********************
-   * HEADER EMAIL INPUT & SUBSCRIBE ELEMENT
-  ********************/
-
+                                                            /********************
+                                                             * HEADER EMAIL INPUT & SUBSCRIBE ELEMENT
+                                                            ********************/
 .subscribe {
 }
   .subscribe > form {
@@ -305,11 +293,9 @@ header p {
     margin-left: calc(50% - 128px);
     margin-top: 30px;
   }
-
-  /********************
-   * HEADER MOUSE ELEMENT
-  ********************/
-
+                                                          /********************
+                                                           * HEADER MOUSE ELEMENT
+                                                          ********************/
 .mouse {
   height: 50px;
   width: 30px;
@@ -354,11 +340,9 @@ header p {
         opacity: 0;
      }
     }
-
-  /************************************************************
-   * CONTENT
-  ************************************************************/
-
+                  /************************************************************
+                   * CONTENT
+                  ************************************************************/
 .content {
   margin-top: 192px;
   margin-bottom: 192px;
@@ -390,11 +374,9 @@ section {
   padding: 0px 25px;
   width: 100%;
 }
-
-/************
- * LEFT ROW
- ************/
-
+                                                                  /************
+                                                                   * LEFT ROW
+                                                                   ************/
   .content-left {
     display: inline-block;
     float: left;
@@ -451,11 +433,9 @@ section {
     margin-bottom: 64px;
   }
 }
-
-  /************
-   * RIGHT ROW
-   ************/
-
+                                                                  /************
+                                                                   * RIGHT ROW
+                                                                   ************/
   .content-right {
     display: inline-block;
     float: left;
@@ -477,8 +457,7 @@ section {
       margin-bottom: 30px;
     }
       .register > form input[type=text]:focus, textarea:focus {
-        background-color: var(--SilverBright);
-        padding: 10px;
+
       }
       .register > form input:nth-child(+2) {
         float: right;
@@ -494,9 +473,9 @@ section {
         text-transform: capitalize;
         color: var(--SilverDark);
       }
-  /************
-   * RIGHT ROW MEDIA QUERY
-   ************/
+                                                                  /************
+                                                                   * RIGHT ROW MEDIA QUERY
+                                                                   ************/
 @media (max-width:1200px) {
   .content-right {
     width: 45%;
@@ -510,20 +489,24 @@ section {
     margin-left: auto;
   }
 }
-      /************
-       * Send Message Button
-       ************/
-
+                                                                  /************
+                                                                   * Send Message Button
+                                                                   ************/
   .register > form input[type=submit] {
     display: inline-block;
     float: right;
     width: 50%;
   }
-
-/************************************************************
- * FOOTER
- ************************************************************/
-
+  @media (max-width:480px) {
+    .register > form input[type=submit] {
+      display: inline-block;
+      float: left;
+      width: 100%;
+  }
+}
+                  /************************************************************
+                   * FOOTER
+                   ************************************************************/
 footer {
   display: inline-block;
   width: 100%;
@@ -531,63 +514,67 @@ footer {
   background: var(--Accent1);
   position: relative;
 }
-
-/************
- * GO TO BANNER BUTTON
- ************/
+                                                                  /************
+                                                                   * GO TO BANNER BUTTON
+                                                                   ************/
 footer > .container {
   position: absolute;
 }
 .back-to-top {
-   width: 80px;
-   height: 80px;
+   width: 60px;
+   height: 60px;
    border-radius: 50%;
    background-color: var(--Accent2);
    position: relative;
-   top: -40px;
-   margin-left: calc(100% - 80px);
+   top: -30px;
+   margin-left: calc(100% - 60px);
    right: 5%;
    border: 1px solid var(--Accent2Dark);
    border-width: 0px 2px 4px 2px;
    box-shadow: 15px 15px 35px 0px rgba(0, 0, 0, 0.1);
 }
+  .back-to-top:hover {
+    background-color: var(--Accent2Dark);
+    border-color: var(--Accent2);
+    color: var(--Accent1Bright);
+  }
   .back-to-top:active {
     border-width: 1px 5px 10px 5px;
     background-color: var(--Accent2Bright);
-
   }
 
   .back-to-top .arrow-up {
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     margin-left: 5px;
     margin-top: 5px;
   }
     .back-to-top i {
-      line-height: 80px;
-      font-size: 60px;
+      line-height: 60px;
+      font-size: 40px;
       text-align: center;
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
       margin-left: -2px;
       margin-top: -4px;
       color: var(--Accent1Bright)
     }
       .back-to-top > i:active {
         color: var(--Accent1Dark);
-        margin-left: -5px;
-        margin-top: -5px;
+        margin-left: ;
+        margin-top: ;
       }
-
-  /************
-   * FOOTER UPPER
-   ************/
-
-.footerUpper {
-
+@media (max-width:480px) {
+  .back-to-top {
+     right: 10%;
+   }
 }
-
+                                                                  /************
+                                                                   * FOOTER UPPER
+                                                                   ************/
+.footerUpper {
+}
 .footerUpper > .socialMediaIcons {
     display: inline-block;
     float: left;
@@ -601,7 +588,10 @@ footer > .container {
   width: 48px;
   height: 48px;
   margin-left: 12px;
-}
+  margin-bottom: 12px;
+} .footerUpper > .socialMediaIcons > .icon:first-child {
+    margin-left: 0px;
+  }
   .footerUpper > .socialMediaIcons > .icon:hover {
     background-color: var(--Accent1Dark);
     border-radius: 50%;
@@ -612,11 +602,14 @@ footer > .container {
   width: 100%;
   color: var(--Accent2);
 }
-
-/************
- * FOOTER LOWER
- ************/
-
+@media (max-width:480px) {
+  .footerUpper {
+    width: 100%;
+  }
+}
+                                                                  /************
+                                                                   * FOOTER LOWER
+                                                                   ************/
 .footerLower {
   border-style: solid;
   border-width: 2px 0px 0px 0px;
@@ -639,19 +632,5 @@ footer > .container {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-
   margin-left: calc(50% - 32px);
-  /*margin-top: calc(256px);*/
-}
-
-
-
-
-@media (max-width:800px) {
-
-}
-
-
-@media (max-width:480px) {
-
 }
